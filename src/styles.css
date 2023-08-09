@@ -1,0 +1,181 @@
+/* CSS styles for Header.js */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title-and-search {
+  display: flex;
+  align-items: center;
+}
+
+.website-name {
+  font-family: 'Bludrug-x3DE0', sans-serif;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.navbar {
+  font-family: 'AnotherFont', sans-serif;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Custom styles for search box */
+.search-box {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.search-box input {
+  border: none;
+  padding: 8px;
+  width: 200px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-box button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+/* Custom styles for profile dropdown */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-dropdown button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  right: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .title-and-search {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .website-name {
+    font-size: 28px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .profile-dropdown button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* ... (other styles) */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.center-section {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+/* ... (other styles) */
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-section, .center-section, .right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* ... (other styles) */
+
