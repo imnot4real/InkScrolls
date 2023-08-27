@@ -13,20 +13,6 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parse JSON requests
 
-// Connect to MongoDB
-const mongoURI = process.env.DB_CONNECTION_STRING;
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => {
-  console.log('Connected to MongoDB');
-})
-.catch((error) => {
-  console.error('MongoDB connection error:', error);
-});
-
-
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {

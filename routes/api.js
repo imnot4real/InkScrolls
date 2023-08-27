@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user'); // Import your User model
 
 // Replace 'your-strong-secret-key' with the secret key you used in auth.js
-const JWT_SECRET_KEY = 'your-strong-secret-key';
+const JWT_SECRET_KEY = 'your_secret_key_here';
 
 // Route for user sign-up
 router.post('/signup', async (req, res) => {

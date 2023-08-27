@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
-import './SignInPage.css'; // Import the custom CSS for the sign-in page
+import './SignInPage.css';
+import { useNavigate } from 'react-router-dom';
+import { signIn } from './api'; // Import the signIn function from api.js
 
 function SignInPage() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Perform sign-in logic here
+    const signInResult = await signIn(email, password); // Call the signIn function
+
+    if (signInResult.success) {
+      // Sign-in successful, navigate to the home page or a protected route
+      navigate('/'); // Change this to the appropriate route
+    } else {
+      setError(signInResult.message);
+    }
   };
 
   return (

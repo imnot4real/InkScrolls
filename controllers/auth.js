@@ -5,6 +5,9 @@ const User = require('../models/user');
 
 const router = express.Router();
 
+// Access the JWT secret key from environment variables
+const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
+
 // Sign-up route
 router.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
@@ -52,7 +55,7 @@ router.post('/signin', async (req, res) => {
     }
 
     // Generate a JWT token
-    const token = jwt.sign({ userId: user._id }, 'your-secret-key', {
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET_KEY, {
       expiresIn: '1h',
     });
 

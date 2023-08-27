@@ -20,7 +20,7 @@ function SignUpPage() {
     }
 
     // Call the signUp function
-    const signUpResult = signUp(username, email, password);
+    const signUpResult = await signUp(username, email, password);
 
     if (signUpResult.success) {
       // Sign-up successful, navigate to the sign-in page
