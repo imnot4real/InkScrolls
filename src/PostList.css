@@ -1,0 +1,219 @@
+/* PostList.css */
+
+/* Container for the grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Two columns */
+  gap: 20px; /* Gap between columns and rows */
+  margin: 0 auto; /* Center the grid */
+  max-width: 1200px; /* Adjust as needed */
+  padding-top: 20px;
+}
+
+/* Larger square post styles */
+.larger-post {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  text-align: center;
+  height: 478px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/galaxy-background-with-falling-star-space-galaxy-illustration-free-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Needed for positioning the text overlay */
+  overflow: hidden;
+}
+
+.larger-post .post-content {
+  position: absolute;
+  bottom: 0; /* Position text at the bottom */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add translucent background */
+}
+
+/* Pseudo-element for blurring background */
+.larger-post::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/galaxy-background-with-falling-star-space-galaxy-illustration-free-vector.jpg'); /* Add the path to your background image */
+  background-size: cover;
+  filter: blur(1px); /* Apply blur effect */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s;
+  position: absolute;
+  }
+  
+  /* Larger square post hover styles */
+  .larger-post:hover::before {
+  opacity: 1; /* Show the blurred background on hover */
+  }
+
+/* Smaller square post styles */
+.smaller-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between smaller posts */
+  }
+  
+.smaller-post-1 .post-content,
+.smaller-post-2 .post-content {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.smaller-post-1{
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 229px;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/12084.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Needed for positioning the text overlay */
+  overflow: hidden;
+}
+
+.smaller-post-1 .post-content {
+  position: absolute;
+  bottom: 0; /* Position text at the bottom */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add translucent background */
+}
+
+/* Pseudo-element for blurring background */
+.smaller-post-1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/12084.jpg'); /* Add the path to your background image */
+  background-size: cover;
+  filter: blur(1px); /* Apply blur effect */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s;
+  content: "";
+  }
+  
+  /* Smaller square post hover styles */
+  .smaller-post:hover::before {
+  opacity: 1; /* Show the blurred background on hover */
+  }
+
+.smaller-post-2{
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 229px;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/earth-1756274_640.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Needed for positioning the text overlay */
+  overflow: hidden;
+  background-color: #f8f9fa;
+  }
+
+.smaller-post-2 .post-content {
+  bottom: 0; /* Position text at the bottom */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add translucent background */
+  position: absolute;
+}
+
+  /* Pseudo-element for blurring background */
+.smaller-post-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('C:/Users/zohaf/GIT/InkScrolls/public/images/earth-1756274_640.webp'); /* Add the path to your background image */
+  background-size: cover;
+  filter: blur(1px); /* Apply blur effect */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s;
+}
+
+/* smaller square post hover styles */
+.smaller-post-2:hover::before {
+  opacity: 1; /* Show the blurred background on hover */
+}
+
+/* Read more link styles */
+.read-more-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  align-self: flex-end;
+  position: relative; /* Add relative positioning */
+  z-index: 1; /* Place the link above the blurred background */
+  transition: color 0.2s, opacity 0.2s; /* Add transition for smooth color change */
+}
+
+.larger-post:hover .read-more-link {
+    color: #0056b3; /* Change color on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+  }
+
+.read-more-link:hover {
+  opacity: 0.7; /* Reduce opacity on hover */
+}
+
+/* Additional styling for better alignment */
+.grid-container {
+  align-items: flex-start;
+}
+
+/* Wrap text within the post content */
+.post-content {
+    flex-grow: 1; /* Expand content to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Place content at the bottom of the box */
+  }
+  
+  /* Reduce font size of the text */
+  .post-content h2 {
+    font-size: 18px;
+    margin-top: 10px; /* Add space between title and content */
+  }
+  
+  .post-content p {
+    font-size: 14px;
+    margin-top: 10px; /* Add space between content and "Read More" link */
+  }
+
+@media screen and (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}

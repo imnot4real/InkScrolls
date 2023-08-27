@@ -1,23 +1,30 @@
+/* CSS styles for App.js */
+
+/* Custom font */
 @font-face {
   font-family: 'Bludrug-x3DE0';
-  src: url("C:/Users/zohaf/my-react-website/src/fonts/Bludrug-x3DE0.otf") format('opentype');
+  src: url("./fonts/Bludrug-x3DE0.otf") format('opentype');
 }
 
+/* General styles for the whole app */
 .App {
   text-align: center;
 }
 
+/* Logo animation settings */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Logo rotation animation */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* App header styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -29,10 +36,12 @@
   color: white;
 }
 
+/* App link styles */
 .App-link {
   color: #61dafb;
 }
 
+/* Logo spin animation keyframes */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

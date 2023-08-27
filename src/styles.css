@@ -1,181 +1,115 @@
-/* CSS styles for Header.js */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+/* Header container */
+.header-container {
+  background-color: #001C30;
+  color: #DAFFFB;
+  padding: 10px; /* Add padding to the header container */
+  box-sizing: border-box;
 }
 
+/* Top section containing title and search */
 .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  border: none; /* Remove the border */
+  padding: 10px 0;
 }
 
-.title-and-search {
-  display: flex;
-  align-items: center;
+/* Search box */
+.search-box {
+  border: none; /* Change to your desired color */
+  padding: 0px;
+  background-color: #001C30; /* Change to your desired background color */
 }
 
+/* Input field in the search box */
+.search-box input.form-control {
+  border: none;
+  background-color: #DAFFFB; /* Change to your desired background color */
+}
+
+/* Search button */
+.search-button {
+  border: none; /* Change to your desired color */
+  background-color: #176B87; /* Change to your desired background color */
+  color: #DAFFFB;
+}
+
+
+/* Website name */
 .website-name {
   font-family: 'Bludrug-x3DE0', sans-serif;
   font-size: 50px;
-  margin-right: 20px;
+  border: none; /* Remove the border */
+  padding: 5px;
+  margin: 0; /* Remove default margin */
 }
 
+/* Navigation menu */
 .navbar {
   font-family: 'AnotherFont', sans-serif;
-  display: flex;
-  align-items: center;
   width: 100%;
+  padding: 0px
 }
 
-nav a {
-  color: #fff;
+/* Style each navigation link */
+.navbar a {
   text-decoration: none;
-  margin-right: 20px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Custom styles for search box */
-.search-box {
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-right: 20px;
-}
-
-.search-box input {
-  border: none;
-  padding: 8px;
-  width: 200px;
-  border-radius: 20px;
-  outline: none;
-}
-
-.search-box button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-}
-
-/* Custom styles for profile dropdown */
-.profile-dropdown {
-  position: relative;
-}
-
-.profile-dropdown button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  top: 100%;
-  right: 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.profile-dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
+  font-size: 16px;
+  margin: 0 10px;
   padding: 10px;
-  text-decoration: none;
-  color: #333;
+  transition: color 0.2s;
+  border: none; /* Remove the border */
+  color: #DAFFFB;
+}
+
+/* Add hover effect on navbar elements */
+.navbar a:hover {
+  color: #ff9900;
+}
+
+/* Profile icon */
+.profile-icon {
+  padding: 10px;
+  border: 1px solid #DAFFFB; /* Add a white border */
+  border-radius: 0px; /* Make the icon circular */
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
-  .title-and-search {
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0;
-    margin-bottom: 10px;
+@media screen and (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .navbar a {
+    margin: 5px 0;
   }
+}
 
+@media screen and (max-width: 600px) {
+  /* Adjust layout for even smaller screens */
   .website-name {
     font-size: 28px;
-    margin-right: 0;
     margin-bottom: 5px;
     text-align: center;
   }
 
-  .search-box {
-    width: 100%;
-    margin-right: 0;
-  }
-
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    margin: 10px 0;
   }
 
-  nav a {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .profile-dropdown button {
-    margin-right: 0;
-    margin-bottom: 10px;
+  .navbar a {
+    margin: 5px 0;
   }
 }
-/* ... (other styles) */
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 10px;
+.container-fluid{
+  background-color: #001C30;
 }
 
-.left-section {
-  display: flex;
-  align-items: center;
+/* Change the color of the dropdown menu items */
+.dropdown-menu a.dropdown-item {
+  color: #001C30; /* Change to your desired color */
 }
 
-.center-section {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: center;
+/* Change the background color of the dropdown menu */
+.dropdown-menu {
+  background-color: #DAFFFB; /* Change to your desired color */
 }
-
-.right-section {
-  display: flex;
-  align-items: center;
-}
-/* ... (other styles) */
-
-.top-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.left-section, .center-section, .right-section {
-  display: flex;
-  align-items: center;
-}
-
-/* ... (other styles) */
-
